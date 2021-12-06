@@ -115,6 +115,18 @@ nav {
     display: none;
 
 }
+.pplay{
+    background: url('pics/play-xxl.png')no-repeat center center/cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 13px;
+}
+.ppause{
+    border-radius: 13px;   
+    background: url('pics/White\ Pause\ Button\ Symbol\ Png.png')no-repeat center center/cover;
+    width: 30px;
+    height: 30px;
+} 
 #middle{
     height: 471px;
     display: none;
@@ -157,15 +169,35 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 22px;
     display: none;
 }
 .footControl{
     margin-bottom: auto;
 }
 .duration{
-    width: 12%;
-    height: 35px;
+    width: 50px;
+    height: 50px;
+    margin-right: 25px;
+}
+.duratio{
+    width: 50px;
+    height: 50px;
+    margin-right: 25px;
+}
+.duratio img{
+    height: 20px ;
+    width: 20px;
+    
+} 
+.pau{
+    display: none;
+}
+.ply.active{
+    display: none;
+}
+.pau .active{
+    display: block;
 }
 /* .lefti{
       position: absolute;
@@ -180,7 +212,7 @@ nav {
     cursor: pointer;
     outline: none;
     height: 2px;
-    margin-top: 13px;
+    margin-top: 11px;
 }
 .icon{
     display: flex;
@@ -458,7 +490,11 @@ border-color: rgb(52, 46, 46);
     }
     .circleImage{
         height: 100%;
+        width: 100%;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
     
       #topButton{
@@ -518,8 +554,8 @@ font-family: 'Playball', cursive;
        cursor: pointer;
     }
     .circleImage img{
-        height: 100%;
-        width: 100%;
+        height: 270px;
+        width: 270px;
         border: 5px solid rgb(15, 15, 15);
         box-shadow: 0 0 93px 30px black;
         margin: 0;
@@ -532,13 +568,15 @@ font-family: 'Playball', cursive;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 20px 0;
+        margin: 19px 0;
         display: none;
         height: 21%;
     }
-    .duration{
-        width: auto;
-        height: 35px;
+    .duratio{
+        width: 50px;
+        height: 50px;
+        /* padding: 3px; */
+        margin-right:0;
     }
     #lefti{
           position: absolute;
@@ -732,14 +770,14 @@ font-family: 'Playball', cursive;
         display: none;
     }
     .pplay{
-        background: url('pics/play.jpg')no-repeat center center/cover;
+        background: url('pics/play-xxl.png')no-repeat center center/cover;
         width: 30px;
         height: 30px;
         border-radius: 13px;
     }
     .ppause{
         border-radius: 13px;   
-        background: url('pics/pause.jpg')no-repeat center center/cover;
+        background: url('pics/White\ Pause\ Button\ Symbol\ Png.png')no-repeat center center/cover;
         width: 30px;
         height: 30px;
     } 
