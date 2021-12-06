@@ -350,19 +350,21 @@ myProgressBar[1].addEventListener('change', () => {
     // audioElement.currentTime = (myProgressBar[0].value * audioElement.duration) / 100;
 })
 const makeAllPlays = () => {
-    Array.from(document.getElementsByClassName('songList')).forEach((element) => {
+    Array.from(document.getElementsByClassName('duratio')).forEach((element) => {
 
-        // element.classList.remove('ppause');
-        // element.classList.add('pplay');
-        element.style.backgroundColor='';
+        element.classList.remove('ppause');
+        element.classList.add('pplay');
+        // element.style.backgroundColor='';
+
     })
 }
  
  
-Array.from(document.getElementsByClassName('songList')).forEach((element) => {
+Array.from(document.getElementsByClassName('duratio')).forEach((element) => {
     element.addEventListener('click', (e) => {
      
         makeAllPlays();
+        element.classList.add('ppause');
             index = parseInt(e.target.id);
             pause.style.display = 'block';
             masterPlay.style.display = 'none';
@@ -370,8 +372,8 @@ Array.from(document.getElementsByClassName('songList')).forEach((element) => {
             masterPlays.style.display = 'none';
             styleE.innerHTML=`#bottom.active:before{background: url('pics/${index}.jpg')no-repeat center center/cover}`;
             // e.target.style.animation='size 0.3s linear 0.1s';
-            e.target.style.backgroundColor='none';
-              e.target.style.backgroundColor='rgb(3 61 15)';
+            // e.target.style.backgroundColor='none';
+            //   e.target.style.backgroundColor='rgb(3 61 15)';
             e.target.style.padding='0 0';
             audioElement.src = `songs/${index}.mp3`;
             audioElement.currentTime = 0;
